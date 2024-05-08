@@ -18,7 +18,6 @@ analyzer:
     flutter_style_todos: ignore
     unused_local_variable: false
 
-
 linter:
   rules:
     - always_declare_return_types
