@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "991756399691",
+    "project_id": "sampledetarameapp",
+    "storage_bucket": "sampledetarameapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991756399691:android:e694844cb8cb1333fa49ce",
+        "android_client_info": {
+          "package_name": "com.fenc0268.detarame_sample_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA14ODJcAZaQ8GGsLRdXLbFJ5yALFJAxzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
