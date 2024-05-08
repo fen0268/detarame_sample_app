@@ -1,1 +1,47 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"sampledetarameapp","appId":"1:991756399691:android:e694844cb8cb1333fa49ce","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"sampledetarameapp","appId":"1:991756399691:ios:f05881ff9b6da526fa49ce","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"dart":{"lib/config/firebase_options.dart":{"projectId":"sampledetarameapp","configurations":{"android":"1:991756399691:android:e694844cb8cb1333fa49ce","ios":"1:991756399691:ios:f05881ff9b6da526fa49ce"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "sampledetarameapp",
+          "appId": "1:991756399691:android:e694844cb8cb1333fa49ce",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "sampledetarameapp",
+          "appId": "1:991756399691:ios:f05881ff9b6da526fa49ce",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/config/firebase_options.dart": {
+          "projectId": "sampledetarameapp",
+          "configurations": {
+            "android": "1:991756399691:android:e694844cb8cb1333fa49ce",
+            "ios": "1:991756399691:ios:f05881ff9b6da526fa49ce"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint",
+        "npm --prefix \"$RESOURCE_DIR\" run build"
+      ]
+    }
+  ]
+}
