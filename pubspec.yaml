@@ -1,5 +1,5 @@
 name: detarame_sample_app
-description: "A new Flutter project."
+description: "デタラメ荘のサンプルアプリ"
 publish_to: "none"
 
 version: 1.0.0+1
@@ -11,14 +11,27 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # 状態管理
   flutter_riverpod: ^2.5.1
+
+  # ルーティング
   go_router: ^14.0.2
+
+  # アノテーション
   freezed_annotation: ^2.4.1
   json_annotation: ^4.9.0
   riverpod_annotation: ^2.3.5
-  gap: ^3.0.1
-  logger: ^2.2.0
+
+  # Firebase
   firebase_core: ^2.31.0
+
+  # ログ
+  logger: ^2.2.0
+  
+  # UI
+  gap: ^3.0.1
+
+  # ローカルDB
   shared_preferences: ^2.2.3
 
 dev_dependencies:
