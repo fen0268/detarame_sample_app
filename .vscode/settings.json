@@ -66,6 +66,7 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "eslint.format.enable": true,
+  "eslint.workingDirectories": [ "./functions" ],
   // TypeScript
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定

@@ -26,6 +26,7 @@ module.exports = {
   rules: {
     quotes: ['error', 'single'],
     semi: ['error', 'never'],
+    'new-cap': 'off',
     'object-curly-spacing': ['error', 'always'],
     'array-bracket-spacing': ['error', 'never'],
     'import/no-unresolved': 0,
