@@ -2,6 +2,7 @@ import * as paypay from '@paypayopa/paypayopa-sdk-node'
 import * as admin from 'firebase-admin'
 import * as functions from 'firebase-functions'
 import { PurchaseData } from '../interfaces/PurchaseData'
+import { ResponseBody } from '../interfaces/ResponseBody'
 
 admin.initializeApp()
 
@@ -16,7 +17,7 @@ export const generatePayPayLink = functions.https.onRequest(
       clientSecret: apiSecret,
       merchantId: merchantId,
       productionMode: false
-    })
+    }) 
 
     const purchaseData: PurchaseData = req.body.purchaseData
 
@@ -35,12 +36,8 @@ export const generatePayPayLink = functions.https.onRequest(
       if (response.STATUS == 201 && 'BODY' in response) {
         const responseBody = response.BODY
         if (responseBody != null) {
-          console.log(typeof responseBody)
-          const transitionUrl = (responseBody as any)['data']['url']
-
+          const transitionUrl = (responseBody as ResponseBody).data.url
           res.json({ transitionUrl })
-
-          // await paymentRef.update({ transitionUrl })
         } else {
           res.json({ error: 'responseBody is null' })
           throw new Error('responseBody is null')
