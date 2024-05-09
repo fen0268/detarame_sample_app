@@ -20,6 +20,9 @@ dependencies:
   # ローカルDB
   shared_preferences: ^2.2.3
 
+  # ログ
+  logger: ^2.2.0
+
   # アノテーション
   freezed_annotation: ^2.4.1
   json_annotation: ^4.9.0
@@ -28,18 +31,12 @@ dependencies:
 
   # Firebase
   firebase_core: ^2.31.0
-  
-
-  # ログ
-  logger: ^2.2.0
-
-  # UI
-  gap: ^3.0.1
   firebase_auth: ^4.19.5
   firebase_storage: ^11.7.5
   cloud_firestore: ^4.17.3
 
-  
+  # UI
+  gap: ^3.0.1
 
 dev_dependencies:
   # テスト
