@@ -1,8 +1,8 @@
 import * as paypay from '@paypayopa/paypayopa-sdk-node'
 import * as admin from 'firebase-admin'
 import * as functions from 'firebase-functions'
-import { PurchaseData } from '../interfaces/PurchaseData'
-import { ResponseBody } from '../interfaces/ResponseBody'
+import { PurchaseData } from '../interfaces/purchaseData'
+import { ResponseBody } from '../interfaces/responseBody'
 
 admin.initializeApp()
 
@@ -29,7 +29,7 @@ export const generatePayPayLink = functions.https.onRequest(
       },
       orderDescription: purchaseData.description,
       codeType: 'ORDER_QR',
-      redirectUrl: ''
+      redirectUrl: 'detarameSo://callback/merchandise'
     }
 
     paypay.QRCodeCreate(payload, async (response) => {
