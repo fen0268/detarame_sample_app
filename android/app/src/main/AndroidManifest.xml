@@ -23,8 +23,17 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+            <!-- 追加するインテントフィルター -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="detarameSo"
+                    android:host="callback"
+                    android:pathPrefix="/merchandise" />
+            </intent-filter>
         </activity>
-        <!-- Don't delete the meta-data below.
+        <!-- Don't delete the meta-data below. https://detarameSo/march
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data
             android:name="flutterEmbedding"
