@@ -38,6 +38,10 @@ dependencies:
   # UI
   gap: ^3.0.1
 
+  # Util
+  http: ^1.2.1
+  url_launcher: ^6.2.6
+
 dev_dependencies:
   # テスト
   flutter_test:
