@@ -24,22 +24,25 @@ final streamFetchMerchandiseProvider =
 
 typedef StreamFetchMerchandiseRef
     = AutoDisposeStreamProviderRef<List<ReadMerchandise>>;
-String _$merchandiseNotifierHash() =>
-    r'c60218a332f17c438c1415b02973125deb8ee64f';
+String _$merchandiseListNotifierHash() =>
+    r'2975e305388ed864e5f6741ce3ed88ba9d297d3a';
 
-/// See also [MerchandiseNotifier].
-@ProviderFor(MerchandiseNotifier)
-final merchandiseNotifierProvider =
-    AutoDisposeNotifierProvider<MerchandiseNotifier, void>.internal(
-  MerchandiseNotifier.new,
-  name: r'merchandiseNotifierProvider',
+/// 管理者操作
+///
+/// Copied from [MerchandiseListNotifier].
+@ProviderFor(MerchandiseListNotifier)
+final merchandiseListNotifierProvider = AutoDisposeAsyncNotifierProvider<
+    MerchandiseListNotifier, List<ReadMerchandise>>.internal(
+  MerchandiseListNotifier.new,
+  name: r'merchandiseListNotifierProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$merchandiseNotifierHash,
+      : _$merchandiseListNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$MerchandiseNotifier = AutoDisposeNotifier<void>;
+typedef _$MerchandiseListNotifier
+    = AutoDisposeAsyncNotifier<List<ReadMerchandise>>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

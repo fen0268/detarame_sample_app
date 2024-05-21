@@ -6,10 +6,20 @@ part 'merchandise_service.g.dart';
 
 // fvm dart run build_runner watch
 
+/// 管理者操作
+// 参考: https://riverpod.dev/docs/essentials/side_effects
 @riverpod
-class MerchandiseNotifier extends _$MerchandiseNotifier {
+class MerchandiseListNotifier extends _$MerchandiseListNotifier {
   @override
-  void build() {}
+  Future<List<ReadMerchandise>> build() async {
+    final query = MerchandiseQuery();
+    return query.fetchDocuments(
+      queryBuilder: (query) => query.orderBy(
+        'createdAt',
+        descending: true,
+      ),
+    );
+  }
 
   final query = MerchandiseQuery();
 
@@ -29,6 +39,54 @@ class MerchandiseNotifier extends _$MerchandiseNotifier {
         price: price,
       ),
     );
+    ref.invalidateSelf();
+    await future;
+  }
+
+  Future<void> editMerchandise(
+    String merchandiseId, {
+    String? name,
+    String? nameEn,
+    String? description,
+    String? descriptionEn,
+    int? price,
+  }) async {
+    await query.update(
+      merchandiseId: merchandiseId,
+      updateMerchandise: UpdateMerchandise(
+        name: name,
+        nameEn: nameEn,
+        description: description,
+        descriptionEn: descriptionEn,
+        price: price,
+      ),
+    );
+    ref.invalidateSelf();
+    await future;
+  }
+
+  Future<void> updateStockStatus(
+    String merchandiseId, {
+    required bool isStock,
+  }) async {
+    await query.update(
+      merchandiseId: merchandiseId,
+      updateMerchandise: UpdateMerchandise(
+        isStock: isStock,
+      ),
+    );
+    ref.invalidateSelf();
+    await future;
+  }
+
+  Future<void> deleteMerchandise(
+    String merchandiseId,
+  ) async {
+    await query.delete(
+      merchandiseId: merchandiseId,
+    );
+    ref.invalidateSelf();
+    await future;
   }
 }
 
