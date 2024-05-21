@@ -13,6 +13,7 @@ class ReadMerchandise {
     required this.name,
     required this.nameEn,
     required this.description,
+    required this.descriptionEn,
     required this.price,
     required this.isStock,
     required this.createdAt,
@@ -27,6 +28,8 @@ class ReadMerchandise {
   final String nameEn;
 
   final String description;
+
+  final String descriptionEn;
 
   final int price;
 
@@ -50,6 +53,7 @@ class ReadMerchandise {
       name: extendedJson['name'] as String,
       nameEn: extendedJson['nameEn'] as String,
       description: extendedJson['description'] as String,
+      descriptionEn: extendedJson['descriptionEn'] as String,
       price: extendedJson['price'] as int,
       isStock: extendedJson['isStock'] as bool? ?? false,
       createdAt: (extendedJson['createdAt'] as Timestamp?)?.toDate(),
@@ -78,6 +82,7 @@ class ReadMerchandise {
     String? name,
     String? nameEn,
     String? description,
+    String? descriptionEn,
     int? price,
     bool? isStock,
     DateTime? createdAt,
@@ -90,6 +95,7 @@ class ReadMerchandise {
       name: name ?? this.name,
       nameEn: nameEn ?? this.nameEn,
       description: description ?? this.description,
+      descriptionEn: descriptionEn ?? this.descriptionEn,
       price: price ?? this.price,
       isStock: isStock ?? this.isStock,
       createdAt: createdAt ?? this.createdAt,
@@ -111,6 +117,7 @@ class CreateMerchandise {
     required this.name,
     required this.nameEn,
     required this.description,
+    required this.descriptionEn,
     required this.price,
     this.isStock,
   });
@@ -121,6 +128,8 @@ class CreateMerchandise {
 
   final String description;
 
+  final String descriptionEn;
+
   final int price;
 
   final bool? isStock;
@@ -130,6 +139,7 @@ class CreateMerchandise {
       'name': name,
       'nameEn': nameEn,
       'description': description,
+      'descriptionEn': descriptionEn,
       'price': price,
       'isStock': isStock ?? true,
       'createdAt': FieldValue.serverTimestamp(),
@@ -155,6 +165,7 @@ class UpdateMerchandise {
     this.name,
     this.nameEn,
     this.description,
+    this.descriptionEn,
     this.price,
     this.isStock,
     this.createdAt,
@@ -165,6 +176,8 @@ class UpdateMerchandise {
   final String? nameEn;
 
   final String? description;
+
+  final String? descriptionEn;
 
   final int? price;
 
@@ -177,6 +190,7 @@ class UpdateMerchandise {
       if (name != null) 'name': name,
       if (nameEn != null) 'nameEn': nameEn,
       if (description != null) 'description': description,
+      if (descriptionEn != null) 'descriptionEn': descriptionEn,
       if (price != null) 'price': price,
       if (isStock != null) 'isStock': isStock,
       if (createdAt != null)

@@ -25,7 +25,7 @@ final streamFetchMerchandiseProvider =
 typedef StreamFetchMerchandiseRef
     = AutoDisposeStreamProviderRef<List<ReadMerchandise>>;
 String _$merchandiseNotifierHash() =>
-    r'9183e1a6dfcb3dbb0bf9e40f3dfeeaca031314f1';
+    r'c60218a332f17c438c1415b02973125deb8ee64f';
 
 /// See also [MerchandiseNotifier].
 @ProviderFor(MerchandiseNotifier)

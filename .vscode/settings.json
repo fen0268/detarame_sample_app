@@ -1,43 +1,25 @@
 {
   "dart.flutterSdkPath": ".fvm/versions/3.19.6",
-  // ファイルを保存する際に、最後に新しい行を自動的に挿入します。
   "files.insertFinalNewline": true,
-  // ファイルを保存する際に、自動的にフォーマットを適用します。
   "editor.formatOnSave": true,
-  // ウィンドウのズームレベルを設定します。-1は少し縮小された表示を意味します。
   "window.zoomLevel": -1,
-  // エディタ内のフォントサイズを14に設定します。
   "editor.fontSize": 14,
-  // 統合ターミナルのフォントサイズを16に設定します。
   "terminal.integrated.fontSize": 16,
-  // デバッグツールバーの位置をコマンドセンターに設定します。
   "debug.toolBarLocation": "commandCenter",
-  // アクティビティバーの向きを垂直に設定します。
   "workbench.activityBar.orientation": "vertical",
-  // インポートを整理します
   "editor.codeActionsOnSave": {
-    // ファイルを保存する際に、ESLintの全ての修正を適用します。
     "source.fixall.eslint": "explicit",
-    // explicit は明示的なアクションが必要であることを意味します。
     "source.organizeImports": "explicit"
   },
-  // マウスホイールを使用したエディタのズームイン/ズームアウトを無効にします。
   "editor.mouseWheelZoom": false,
-  // エディタのアクセシビリティサポートを無効にします。
   "editor.accessibilitySupport": "off",
-  // インラインの提案を有効にします。
   "editor.inlineSuggest.enabled": true,
-  // Prettierをデフォルトのフォーマッタとして設定します。
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // VS Codeのアイコンテーマを material-icon-theme に設定します。
   "workbench.iconTheme": "vscode-icons",
-  // 検索から.fvm/ディレクトリを除外します。
   "search.exclude": {
     ".fvm/": true
   },
-  // ファイルを保存する際に、行末の空白を自動的に削除しないようにします。
   "files.trimTrailingWhitespace": false,
-  // macOS用の統合ターミナルの環境変数を設定します。
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
@@ -46,17 +28,13 @@
     "pubspec.yaml": "pubspec.lock,pubspec_overrides.yaml,.packages,.flutter-plugins,.flutter-plugins-dependencies,.metadata",
     "*.dart": "${capture}.g.dart, ${capture}.freezed.dart, ${capture}.flutterfire_gen.dart,"
   },
-
-  // CSS
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
-  // Json
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // JavaScript
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnType": true,
@@ -66,11 +44,12 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
   "eslint.format.enable": true,
-  "eslint.workingDirectories": [ "./functions" ],
-  // TypeScript
+  "eslint.workingDirectories": [
+    "./functions"
+  ],
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode", // フォーマッタをprettierに指定
-    "editor.formatOnSave": true, // 保存時にフォーマットを適用
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
     "editor.formatOnType": true,
     "editor.tabSize": 2,
     "editor.insertSpaces": false,

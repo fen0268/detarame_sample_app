@@ -4,6 +4,8 @@ import '../domain/merchandise.dart';
 
 part 'merchandise_service.g.dart';
 
+// fvm dart run build_runner watch
+
 @riverpod
 class MerchandiseNotifier extends _$MerchandiseNotifier {
   @override
@@ -15,6 +17,7 @@ class MerchandiseNotifier extends _$MerchandiseNotifier {
     String name,
     String nameEn,
     String description,
+    String descriptionEn,
     int price,
   ) async {
     await query.add(
@@ -22,6 +25,7 @@ class MerchandiseNotifier extends _$MerchandiseNotifier {
         name: name,
         nameEn: nameEn,
         description: description,
+        descriptionEn: descriptionEn,
         price: price,
       ),
     );

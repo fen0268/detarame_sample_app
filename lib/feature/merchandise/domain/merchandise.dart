@@ -4,6 +4,7 @@ import 'package:flutterfire_gen_annotation/flutterfire_gen_annotation.dart';
 part 'merchandise.flutterfire_gen.dart';
 
 // 参考: https://zenn.dev/kosukesaigusa/articles/flutterfire_gen
+// fvm dart run build_runner build --delete-conflicting-outputs
 
 @FirestoreDocument(path: 'merchandise/{merchandiseId}')
 class Merchandise {
@@ -11,6 +12,7 @@ class Merchandise {
     required this.name,
     required this.nameEn,
     required this.description,
+    required this.descriptionEn,
     required this.price,
     required this.isStock,
     required this.createdAt,
@@ -25,6 +27,9 @@ class Merchandise {
 
   // 商品説明
   final String description;
+
+  // 商品説明（英語）
+  final String descriptionEn;
 
   // 価格
   final int price;
